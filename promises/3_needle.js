@@ -1,12 +1,12 @@
 const needle = require('needle');
-const endpoint = "https://pokeapi.co/api/v2/type"
+const endpoint = "https://anapioficeandfire.com/api/characters"
 
 needle('get', endpoint)
     .then((response)=>{
         return response.body.results
     })
-    .then((tipos_pokemon)=>{
-        tipos_pokemon.forEach((element)=>{
+    .then((tipos)=>{
+        tipos.forEach((element)=>{
             console.log(element.name)
             console.log('----------')  
         })
